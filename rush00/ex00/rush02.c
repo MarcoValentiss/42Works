@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 20:20:58 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/28 13:25:37 by azengin          ###   ########.fr       */
+/*   Created: 2022/08/28 15:07:50 by azengin           #+#    #+#             */
+/*   Updated: 2022/08/28 15:29:28 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char a);
+void	ft_putchar(char c);
 
-void	ft_print(int uzun, char ilkkar, char ortakar, char sonkar)
+void	ft_print(int uzun, int ilkkar, int ortakar, int sonkar)
 {
 	int	sayac;
 
@@ -32,7 +32,7 @@ void	ft_print(int uzun, char ilkkar, char ortakar, char sonkar)
 			ft_putchar(ortakar);
 		}
 		sayac++;
-	}	
+	}
 	ft_putchar('\n');
 }
 
@@ -43,9 +43,13 @@ void	rush(int x, int y)
 	yataysira = 1;
 	while (yataysira <= y)
 	{
-		if (yataysira == 1 || yataysira == y)
+		if (yataysira == 1)
 		{
-			ft_print(x, 'A', 'B', 'C');
+			ft_print(x, 'A', 'B', 'A');
+		}
+		else if (yataysira == y)
+		{
+			ft_print(x, 'C', 'B', 'C');
 		}
 		else
 		{
