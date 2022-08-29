@@ -6,7 +6,7 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 11:16:32 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/28 12:57:30 by azengin          ###   ########.fr       */
+/*   Updated: 2022/08/30 00:23:26 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_cikti(int n)
+void	ft_print2(int n)
 {
 	if (n > 9)
 	{
@@ -33,25 +33,30 @@ void	ft_cikti(int n)
 
 void	ft_print_comb2(void)
 {
-	int	ilk;
+	int	first;
+	int	second;
 
-	int	ikin;
-
-	ilk = 0;
-	while (ilk <= 98)
+	first = 0;
+	while (first <= 98)
 	{
-		ikin = ilk + 1;
-		while (ikin <= 99)
+		second = first + 1;
+		while (second <= 99)
 		{
-			ft_cikti(ilk);
+			ft_print2(first);
 			write(1, " ", 1);
-			ft_cikti(ikin);
-			if (ilk != 98)
+			ft_print2(second);
+			if (first != 98)
 			{
 				write(1, ", ", 2);
 			}
-			ikin++;
+			second++;
 		}
-		ilk++;
+		first++;
 	}
-}	
+	write(1, "\n", 1);
+}
+/*int	main(void)
+{
+	ft_print_comb2();
+	return (0);
+}*/

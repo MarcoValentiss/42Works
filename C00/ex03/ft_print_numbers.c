@@ -6,7 +6,7 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 14:56:17 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/26 08:46:19 by azengin          ###   ########.fr       */
+/*   Updated: 2022/08/29 22:56:53 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft_print_numbers(void)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	ft_print_numbers();
 	return (0);
-}
+}*/

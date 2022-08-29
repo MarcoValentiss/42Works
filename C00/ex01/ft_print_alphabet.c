@@ -6,7 +6,7 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 14:13:24 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/26 08:41:53 by azengin          ###   ########.fr       */
+/*   Updated: 2022/08/29 22:54:39 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ void	ft_print_alphabet(void)
 		x++;
 	}
 }
-
-int	main(void)
+/*int	main(void)
 {
 	ft_print_alphabet();
 	return (0);
-}
+}*/
