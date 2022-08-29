@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 20:20:58 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/28 19:28:10 by azengin          ###   ########.fr       */
+/*   Created: 2022/08/28 19:19:25 by azengin           #+#    #+#             */
+/*   Updated: 2022/08/28 19:27:09 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char a);
+void	ft_putchar(char c);
 
 void	ft_print(int len, char firstc, char midc, char lastc)
 {
@@ -32,24 +32,30 @@ void	ft_print(int len, char firstc, char midc, char lastc)
 			ft_putchar(midc);
 		}
 		count++;
-	}	
+	}
 	ft_putchar('\n');
 }
 
 void	rush(int x, int y)
 {
-	int	line;
+	int		line;
+	char	t;
 
+	t = 92;
 	line = 1;
 	while (line <= y)
 	{
-		if (line == 1 || line == y)
+		if (line == 1)
 		{
-			ft_print(x, 'A', 'B', 'C');
+			ft_print(x, '/', '*', t);
+		}
+		else if (line == y)
+		{
+			ft_print(x, t, '*', '/');
 		}
 		else
 		{
-			ft_print(x, 'B', ' ', 'B');
+			ft_print(x, '*', ' ', '*');
 		}
 		line++;
 	}

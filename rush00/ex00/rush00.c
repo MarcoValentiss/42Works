@@ -1,32 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush00.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/28 17:55:37 by azengin           #+#    #+#             */
+/*   Updated: 2022/08/28 19:14:08 by azengin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void	ft_putchar(char c);
 
-void	ft_print(int uzun, int ortakar, int digerkar)
+void	ft_print(int len, char midc, char otherc)
 {
-	int	sayac;
+	int	count;
 
-	sayac = 1;
-	while (sayac <= uzun)
+	count = 1;
+	while (count <= len)
 	{
-		if (sayac == 1 || sayac == uzun)
+		if (count == 1 || count == len)
 		{
-			ft_putchar(digerkar);
+			ft_putchar(otherc);
 		}
 		else
 		{
-			ft_putchar(ortakar);
+			ft_putchar(midc);
 		}
-		sayac++;
+		count++;
 	}
 	ft_putchar('\n');
 }
 
 void	rush(x, y)
 {
-	int	yataysira;
-	yataysira = 1;
-	while (yataysira <= y)
+	int	line;
+
+	line = 1;
+	while (line <= y)
 	{
-		if (yataysira == 1 || yataysira == y)
+		if (line == 1 || line == y)
 		{
 			ft_print(x, '-', 'o');
 		}
@@ -34,6 +47,6 @@ void	rush(x, y)
 		{
 			ft_print(x, ' ', '|');
 		}
-		yataysira++;
+		line++;
 	}
 }

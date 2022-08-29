@@ -6,48 +6,48 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 15:07:50 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/28 15:29:28 by azengin          ###   ########.fr       */
+/*   Updated: 2022/08/28 19:27:45 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print(int uzun, int ilkkar, int ortakar, int sonkar)
+void	ft_print(int len, int firstc, int midc, int lastc)
 {
-	int	sayac;
+	int	count;
 
-	sayac = 1;
-	while (sayac <= uzun)
+	count = 1;
+	while (count <= len)
 	{
-		if (sayac == 1)
+		if (count == 1)
 		{
-			ft_putchar(ilkkar);
+			ft_putchar(firstc);
 		}
-		else if (sayac == uzun)
+		else if (count == len)
 		{
-			ft_putchar(sonkar);
+			ft_putchar(lastc);
 		}
 		else
 		{
-			ft_putchar(ortakar);
+			ft_putchar(midc);
 		}
-		sayac++;
+		count++;
 	}
 	ft_putchar('\n');
 }
 
 void	rush(int x, int y)
 {
-	int	yataysira;
+	int	line;
 
-	yataysira = 1;
-	while (yataysira <= y)
+	line = 1;
+	while (line <= y)
 	{
-		if (yataysira == 1)
+		if (line == 1)
 		{
 			ft_print(x, 'A', 'B', 'A');
 		}
-		else if (yataysira == y)
+		else if (line == y)
 		{
 			ft_print(x, 'C', 'B', 'C');
 		}
@@ -55,6 +55,6 @@ void	rush(int x, int y)
 		{
 			ft_print(x, 'B', ' ', 'B');
 		}
-		yataysira++;
+		line++;
 	}
 }

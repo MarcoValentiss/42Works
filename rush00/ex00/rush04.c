@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   rush0X.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mkoroglu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 20:20:58 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/28 19:28:10 by azengin          ###   ########.fr       */
+/*   Created: 2022/08/28 19:18:54 by mkoroglu          #+#    #+#             */
+/*   Updated: 2022/08/28 19:43:29 by mkoroglu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char a);
+#include <unistd.h>
+
+void	ft_putchar(char c);
 
 void	ft_print(int len, char firstc, char midc, char lastc)
 {
-	int	count;
-
+	int count;
 	count = 1;
-	while (count <= len)
+	while(count <= len)
 	{
-		if (count == 1)
+		if(count == 1)
 		{
 			ft_putchar(firstc);
 		}
-		else if (count == len)
+		else if(count == len)
 		{
 			ft_putchar(lastc);
 		}
@@ -31,21 +32,24 @@ void	ft_print(int len, char firstc, char midc, char lastc)
 		{
 			ft_putchar(midc);
 		}
-		count++;
-	}	
+		counter++;
+	}
 	ft_putchar('\n');
 }
 
 void	rush(int x, int y)
 {
-	int	line;
-
+	int line;
 	line = 1;
-	while (line <= y)
+	while(line <= y)
 	{
-		if (line == 1 || line == y)
+		if(line == 1)
 		{
-			ft_print(x, 'A', 'B', 'C');
+			ft_print(x, 'A', 'B', 'C');	
+		}
+		else if(line == y)
+		{
+			ft_print(x, 'C', 'B', 'A');
 		}
 		else
 		{
