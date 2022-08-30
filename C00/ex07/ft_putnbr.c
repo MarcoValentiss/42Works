@@ -6,7 +6,7 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:10:46 by azengin           #+#    #+#             */
-/*   Updated: 2022/08/30 00:22:57 by azengin          ###   ########.fr       */
+/*   Updated: 2022/08/30 18:58:00 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ void	ft_putnbr(int nb)
 		ft_putchar (nb + 48);
 	}
 }
-/*int	main(void)
+
+int	main(void)
 {
 	ft_putnbr(-4124);
 	return (0);
-}*/
+}
