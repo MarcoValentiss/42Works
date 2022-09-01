@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 23:17:03 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/01 21:38:07 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/02 00:54:52 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/02 01:07:25 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_ft(int *nbr)
+/*#include <stdio.h>*/
+char	*ft_strcpy(char *dest, char *src)
 {
-	*nbr = 42;
-}
+	int	i;
 
-void	ft_putchar(char a)
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+/*
+int	main(void)
 {
-	write(1, &a, 1);
-}
+	char	src[] = "HastalaVista";
+	char	dest[] = "Wada";
 
-void	ft_printnmb(int n)
-{
-	ft_putchar(n / 10 + 48);
-	ft_putchar(n % 10 + 48);
-}
-
-
-int	main (void)
-{
-	int	number;
-	int	*nbr;
-
-	number = 21;
-	nbr = &number;
-	ft_ft(nbr);
-	ft_printnmb(number);
-}
+	printf("%s", ft_strcpy(dest, src));
+}*/

@@ -1,51 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 09:00:06 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/01 20:05:39 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/01 20:14:11 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/01 20:21:40 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putchar(char x)
+#include <stdio.h>
+
+void	ft_sort_int_tab(int *tab, int size)
 {
-	write(1, &x, 1);
-}
+	int	i;
+	int	swap;
 
-void	ft_print_comb(void)
-{
-	int	a;
-	int	b;
-	int	c;
-
-	a = '0';
-	while (a <= '7')
+	while (size > 0)
 	{
-		b = a + 1;
-		while (b <= '8')
+		i = 0;
+		while (i < size - 1)
 		{
-			c = b + 1;
-			while (c <= '9')
+			if (tab[i] > tab[i + 1])
 			{
-				ft_putchar(a);
-				ft_putchar(b);
-				ft_putchar(c);
-				if (a != '7')
-					write(1, ", ", 2);
-				c++;
+				swap = tab[i];
+				tab[i] = tab[i + 1];
+				tab[i + 1] = swap;
 			}
-			b++;
+			i++;
 		}
-		a++;
+		size--;
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
-	ft_print_comb();
-	return (0);
-}*/
+	int	tab[] = {4, 5, 1, 3, 7, 2};
+	int	size;
+	size = 6;
+	ft_sort_int_tab(tab, size);
+	printf("%d, %d, %d, %d, %d, %d", tab[0], tab[1], tab[2], tab[3], tab[4], tab[5]);
+}
