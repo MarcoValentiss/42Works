@@ -1,43 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 15:33:58 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/02 15:34:35 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/05 00:30:56 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/05 01:13:32 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-/*#include <stdio.h>*/
-int	ft_str_is_numeric(char *str)
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_strrev(char	*str)
 {
 	int	i;
+	int	size;
+	char	c;
 
+	c = '\0';
 	i = 0;
-	if (str[i] == '\0')
-	{
-		return (1);
-	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= '0' && str[i] <= '9')
+	size = ft_strlen(str);
+	while (i < (size / 2))
 		{
+			str[i] = c;
+			str[i] = str[(size - 1) - i];
+			str[(size - 1) - i] = c;
 			i++;
 		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+		return (str);
 }
-/*int	main(void)
-{
-	char	str[] = {'\0'};
 
-	printf("%d\n", ft_str_is_numeric("24912"));
-	printf("%d\n", ft_str_is_numeric("341.21"));
-	printf("%d\n", ft_str_is_numeric(str));
-}*/
+int	main(void)
+{
+char	test[] = "hasan";
+
+printf("%s", ft_strrev(test));
+return (0);
+}

@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 23:17:03 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/01 21:38:07 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/04 21:52:08 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/04 22:00:45 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_ft(int *nbr)
+/*#include <stdio.h>*/
+int	ft_strlen(char *str)
 {
-	*nbr = 42;
-}
+	int	len;
 
-void	ft_putchar(char a)
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
+/*
+int	main(void)
 {
-	write(1, &a, 1);
-}
-
-void	ft_printnmb(int n)
-{
-	ft_putchar(n / 10 + 48);
-	ft_putchar(n % 10 + 48);
-}
-
-
-int	main (void)
-{
-	int	number;
-	int	*nbr;
-
-	number = 21;
-	nbr = &number;
-	ft_ft(nbr);
-	ft_printnmb(number);
-}
+	char	str[] = "helpme!";
+	printf("%d", ft_strlen(str));
+}*/
