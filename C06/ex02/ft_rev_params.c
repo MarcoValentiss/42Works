@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <azengin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:26:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/13 12:27:27 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/13 12:28:10 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/13 12:38:05 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_putstr(char *str)
 {
 	int	i;
 
-	(void)argc;
 	i = 0;
-	while (argv[0][i] != '\0')
+	while (str[i])
 	{
-		write(1, &argv[0][i], 1);
+		write(1, &str[i], 1);
 		i++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	int	len;
+
+	len = argc - 1;
+	while (len > 0)
+	{
+		ft_putstr(argv[len]);
+		write(1, "\n", 1);
+		len--;
 	}
 	return (0);
 }
