@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:39:54 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/13 14:55:54 by azengin          ###   ########.fr       */
+/*   Updated: 2022/09/14 12:57:42 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
 		i++;
@@ -38,7 +38,7 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	while ((s1[i] != '\0' || s2[i] != '\0') && s1[i] == s2[i])
 	{
 		i++;
 	}
@@ -56,23 +56,25 @@ int	main(int argc, char **argv)
 	int size;
 
 	size = argc;
-	i = 1;
-	if (argc <= 1)
+	if (size <= 1)
 	   return (1);
 
-	while (argc != 1)
+	while (size != 1)
 	{
-		i = 0;
-		while (i < argc)
+		i = 1;
+		while (i < size - 1)
 		{
 			if (ft_strcmp(argv[i], argv[i + 1]) == 1)
-			ft_swap(&argv[i], &argv[i + 1]);
-			i++;
+			{
+				ft_swap(&argv[i], &argv[i + 1]);
+				i = 1;
+			}
+			i++;;
 		}
-		argc--;
+		size--;
 	}
 	i = 1;
-	while (i < size)
+	while (i < argc)
 	{
 		ft_putstr(argv[i]);
 		write(1, "\n", 1);
