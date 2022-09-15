@@ -6,7 +6,7 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 00:30:56 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/05 01:13:32 by azengin          ###   ########.fr       */
+/*   Updated: 2022/09/15 16:13:40 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -29,12 +29,11 @@ char	*ft_strrev(char	*str)
 	int	size;
 	char	c;
 
-	c = '\0';
 	i = 0;
 	size = ft_strlen(str);
 	while (i < (size / 2))
 		{
-			str[i] = c;
+			c  = str[i];
 			str[i] = str[(size - 1) - i];
 			str[(size - 1) - i] = c;
 			i++;
