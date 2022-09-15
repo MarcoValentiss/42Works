@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:39:54 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/14 12:57:42 by azengin          ###   ########.fr       */
+/*   Updated: 2022/09/14 22:28:44 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
 
-void ft_swap(char **a, char **b)
+void	ft_swap(char **a, char **b)
 {
 	char	*swap;
 
@@ -53,31 +54,26 @@ int	ft_strcmp(char *s1, char *s2)
 int	main(int argc, char **argv)
 {
 	int	i;
-	int size;
+	int	size;
 
 	size = argc;
 	if (size <= 1)
-	   return (1);
-
+		return (1);
 	while (size != 1)
 	{
 		i = 1;
 		while (i < size - 1)
 		{
 			if (ft_strcmp(argv[i], argv[i + 1]) == 1)
-			{
 				ft_swap(&argv[i], &argv[i + 1]);
-				i = 1;
-			}
-			i++;;
+			i++;
 		}
 		size--;
 	}
 	i = 1;
-	while (i < argc)
+	while (i < size)
 	{
 		ft_putstr(argv[i]);
-		write(1, "\n", 1);
 		i++;
 	}
 	return (0);

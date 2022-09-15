@@ -1,0 +1,3 @@
+We’re dealing with a program here, you should therefore have a function main in
+your .c file.
+• Create a program that displays its own name.
