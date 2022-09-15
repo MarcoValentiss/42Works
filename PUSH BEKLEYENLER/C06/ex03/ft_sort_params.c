@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:39:54 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/14 22:28:44 by azengin          ###   ########.fr       */
+/*   Updated: 2022/09/15 10:31:48 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	main(int argc, char **argv)
 		size--;
 	}
 	i = 1;
-	while (i < size)
+	while (i < argc)
 	{
 		ft_putstr(argv[i]);
 		i++;
