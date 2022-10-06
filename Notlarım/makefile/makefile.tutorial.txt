@@ -1,0 +1,25 @@
+MAKEFİLE YAZMAK:
+
+Bir kural yazılırken önce hedefin adı yazılır. Hedefin adından sonra : işareti konur ve gereksinimler boşluk karakteriyle ayrılacak şekilde o satır boyunca yazılır. Sonraki satırlarda ise o kuralın tarifinde yer alan bütün komutlar girintili bir şekilde yazılır. Bu komutlardan her biri build esnasında shell tarafından sırayla çalıştırılır.
+
+main: main.c
+    gcc -o main main.c
+
+Main = hedef
+main.c = gereksinim
+Gcc - o main main.c = tarif
+
+KARAR VERME ALGORİTMASI
+Make'i çok kullanışlı bir program yapan şey basit ama bir o kadar da etkili olan karar verme algoritmasıdır. Bir hedef adıyla çalıştırıldığında Make şu basamakları uygular:
+
+Hedefin bir kuralı olup olmadığını kontrol et.
+Eğer hedefin bir kuralı varsa devam et.
+Eğer hedefin bir kuralı yoksa hedefin bir dosya olarak dizinde bulunup bulunmadığını kontrol et.
+Dosya dizindeyse hedef günceldir, hedef build edilmiştir. (Base case)
+Dosya dizinde yoksa hedefin build edilemeyeceği varsayılır, hata ver. (Base case)
+Kuralı olan hedefin bütün gereksinimlerini build et. (Bu recursive bir işlemdir, bütün gereksinimler birer hedef olarak kabul edilir.)
+Hedefi build etmenin gerekliliğini kabul et.
+Eğer hedef dizinde yoksa hedefi build et.
+Eğer hedef dizinde varsa gereksinimlerin ve hedefin son değiştirilmelerini karşılaştır.
+Eğer gereksinimler daha yeniyse hedef güncel değildir, hedefi build et.
+Diğer türlü hedef günceldir, hedef build edilmiştir.

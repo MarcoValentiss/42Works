@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azengin <azengin@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/14 21:37:17 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/14 21:38:24 by azengin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_is_prime(int nb)
 {
 	int	i;
-	
+
 	if (nb <= 1)
 	{
 		return (0);
@@ -14,11 +26,4 @@ int	ft_is_prime(int nb)
 		i++;
 	}
 	return (1);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	printf("%d", ft_is_prime(13));
-	return (0);
 }
