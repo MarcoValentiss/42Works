@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 20:22:47 by azengin          ###   ########.fr       */
+/*   Created: 2022/10/12 21:37:37 by azengin           #+#    #+#             */
+/*   Updated: 2022/10/12 21:38:17 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include <stdio.h>
 
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-size_t ft_strlen(const char *s);
-
-#endif
+void    *ft_memset(void *b, int c, size_t len)
+{
+    unsigned char s;
+    
+    s = (unsigned char)c;
+    ddd
+}

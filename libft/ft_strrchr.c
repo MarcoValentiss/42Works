@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 20:22:47 by azengin          ###   ########.fr       */
+/*   Created: 2022/10/12 21:37:54 by azengin           #+#    #+#             */
+/*   Updated: 2022/10/12 21:38:07 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include <stdio.h>
+#include "libft.h"
 
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-size_t ft_strlen(const char *s);
+char    *strrchr(const char *s, int c)
+{
+    size_t  i;
+    char    a;
 
-#endif
+    a = (char)c;
+    i = ft_strlen(s);
+    while (s[i])
+    {
+        if (s[i] == a)
+            return (s[i]);
+        i--;
+    }
+    return (0);
+}

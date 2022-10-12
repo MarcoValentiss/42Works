@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 20:22:47 by azengin          ###   ########.fr       */
+/*   Created: 2022/10/12 21:37:50 by azengin           #+#    #+#             */
+/*   Updated: 2022/10/12 21:38:26 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include <unistd.h>
 
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-size_t ft_strlen(const char *s);
-
-#endif
+size_t ft_strlen(const char *s)
+{
+    size_t  len;
+    
+    len = 0;
+    while (s[len])
+    {
+        len++;
+    }
+    return (len);
+}

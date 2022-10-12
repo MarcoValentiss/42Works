@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 20:22:47 by azengin          ###   ########.fr       */
+/*   Created: 2022/10/12 21:37:56 by azengin           #+#    #+#             */
+/*   Updated: 2022/10/12 21:38:09 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+int ft_tolower(int c)
+{
+    unsigned char   s;
 
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-size_t ft_strlen(const char *s);
-
-#endif
+    s = (unsigned char)c;
+    if(s >= 'A' && s <= 'Z')
+        return(s + 32);
+    else
+        return(s);
+}
