@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/07 13:17:39 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/10 10:54:22 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	s;
+	unsigned int	i;
+	unsigned int	s;
 
 	i = 0;
 	s = 0;
@@ -21,7 +21,7 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	while (src[s] != '\0')
+	while (src[s] != '\0' && s < nb)
 	{
 		dest[i] = src[s];
 		i++;

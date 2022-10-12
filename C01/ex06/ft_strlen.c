@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/01 22:52:28 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/01 23:25:33 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strcat(char *dest, char *src)
+/*#include <stdio.h>*/
+int	ft_strlen(char *str)
 {
-	int	i;
-	int	s;
+	int	len;
 
-	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
+	len = 0;
+	while (str[len] != '\0')
 	{
-		i++;
+		len++;
 	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (len);
 }
+/*int	main(void)
+{
+	char	string[] = "denizdeniz";
+	char	*first_p;
+	int		length;
+
+	first_p = &string[0];
+	length = ft_strlen(first_p);
+	printf("length %d\n", length);
+}*/

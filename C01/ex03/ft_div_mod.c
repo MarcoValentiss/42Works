@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/08/31 16:37:10 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/01 23:12:37 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strcat(char *dest, char *src)
+/*#include <stdio.h>*/
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int	i;
-	int	s;
-
-	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
+	if (b == 0)
 	{
-		i++;
+		return ;
 	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	*div = a / b;
+	*mod = a % b;
 }
+/*
+int	main(void)
+{
+	int	a;
+	int	b;
+	int	testdiv;
+	int	testmod;
+
+	a = 9;
+	b = 0;
+	printf("%d", a);
+	printf("%d", b);
+	ft_div_mod(a, b, &testdiv, &testmod);
+	printf("%d", testdiv);
+	printf("%d", testmod);
+	return (0);
+}*/

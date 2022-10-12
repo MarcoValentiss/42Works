@@ -1,32 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/08 11:32:58 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/08 12:03:40 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+#include <unistd.h>
+
+void	ft_putchar(char a)
+{
+	write(1, &a, 1);
+}
+
+void	ft_printhex(char *str)
+{
+	char	t;
+
+	t = 92;
+	ft_putchar(t);
+	ft_putchar("0123456789abcdef"[*str / 16]);
+	ft_putchar("0123456789abcdef"[*str % 16]);
+}
+
+void	ft_putstr_non_printable(char *str)
 {
 	int	i;
-	int	s;
 
 	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
+	while (str[i] != '\0')
 	{
+		if (str[i] < 32 || str[i] > 126)
+		{
+			ft_printhex(&str[i]);
+		}
+		else
+		{
+			ft_putchar(str[i]);
+		}
 		i++;
 	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
 }

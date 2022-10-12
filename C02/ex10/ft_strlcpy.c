@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/03 07:39:52 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/07 19:20:34 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+int	ft_strlen(char *str)
 {
-	int	i;
-	int	s;
+	int	len;
 
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}
+
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	srcsize;
+
+	srcsize = ft_strlen(src);
 	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
+	if (size != 0)
 	{
-		i++;
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (srcsize);
 }

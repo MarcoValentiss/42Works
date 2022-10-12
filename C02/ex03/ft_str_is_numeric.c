@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/02 15:33:58 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/07 19:18:07 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
-	int	s;
 
 	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
+	if (str[i] == '\0')
 	{
-		i++;
+		return (1);
 	}
-	while (src[s] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[s];
-		i++;
-		s++;
+		if (str[i] >= '0' && str[i] <= '9')
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

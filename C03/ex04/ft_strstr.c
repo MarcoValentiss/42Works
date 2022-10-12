@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/08 13:01:16 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/10 11:04:43 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	s;
 
 	i = 0;
 	s = 0;
-	while (dest[i] != '\0')
+	if (to_find[s] == '\0')
 	{
+		return (str);
+	}
+	while (str[i] != '\0')
+	{
+		s = 0;
+		while (str[i + s] == to_find[s] && str[i + s] != '\0')
+		{
+			if (to_find[s + 1] == '\0')
+			{
+				return (&str[i]);
+			}
+			s++;
+		}
 		i++;
 	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

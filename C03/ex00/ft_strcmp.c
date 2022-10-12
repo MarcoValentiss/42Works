@@ -6,11 +6,9 @@
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:17:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/07 09:41:04 by azengin          ###   ########.fr       */
+/*   Updated: 2022/09/10 10:18:52 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -23,19 +21,12 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	if (s1[i] > s2[i])
 	{
-		return (1);
+		return (s1[i] - s2[i]);
 	}
 	else if (s1[i] < s2[i])
 	{
-		return (-1);
+		return (s1[i] - s2[i]);
 	}
 	else
 		return (0);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_strcmp("Hey", "Pork"));
-	printf("%d\n", ft_strcmp("Hey", "Hey"));
-	printf("%d", ft_strcmp("Pork", "Hey"));
 }

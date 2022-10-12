@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/08/31 12:58:34 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/14 20:20:59 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strcat(char *dest, char *src)
+#include <unistd.h>
+void	ft_swap(int *a, int *b)
 {
-	int	i;
-	int	s;
+	int	*tmp;
 
-	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	*tmp = NULL
+	*tmp = *a;
+	*a = *b;
+	*b = *tmp;
+}
+
+void	ft_put2numb(int a, int b)
+{
+	write(1, &a, 1);
+	write(1, &b, 1);
+}
+
+int	main(void)
+{
+	int	c;
+	int	d;
+
+	c = '3';
+	d = '5';
+	ft_put2numb(c, d);
+	write(1, "\n", 1);
+	ft_swap(&c, &d);
+	ft_put2numb(c, d);
 }

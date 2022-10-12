@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/08/30 23:17:03 by azengin           #+#    #+#             */
+/*   Updated: 2022/09/01 22:57:59 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strcat(char *dest, char *src)
+/*#include <unistd.h>*/
+void	ft_ft(int *nbr)
 {
-	int	i;
-	int	s;
-
-	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	while (src[s] != '\0')
-	{
-		dest[i] = src[s];
-		i++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	*nbr = 42;
 }
+/*void	ft_putchar(char a)
+{
+	write(1, &a, 1);
+}
+
+void	ft_printnmb(int n)
+{
+	ft_putchar(n / 10 + 48);
+	ft_putchar(n % 10 + 48);
+}
+
+
+int	main (void)
+{
+	int	number;
+	int	*nbr;
+
+	number = 21;
+	nbr = &number;
+	ft_ft(nbr);
+	ft_printnmb(number);
+	return (0);
+}*/

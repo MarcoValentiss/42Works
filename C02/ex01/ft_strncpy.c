@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azengin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ioztimur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 10:07:38 by azengin           #+#    #+#             */
-/*   Updated: 2022/09/10 10:56:33 by azengin          ###   ########.fr       */
+/*   Created: 2022/09/05 11:01:11 by ioztimur          #+#    #+#             */
+/*   Updated: 2022/09/08 19:49:02 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-	int	s;
+	unsigned int	i;
 
 	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
+	while (src[i] != '\0' && n > i)
 	{
+		dest[i] = src[i];
 		i++;
 	}
-	while (src[s] != '\0')
+	while (i < n)
 	{
-		dest[i] = src[s];
+		dest[i] = '\0';
 		i++;
-		s++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }
