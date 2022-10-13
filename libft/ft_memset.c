@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:37 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:38:17 by azengin          ###   ########.fr       */
+/*   Updated: 2022/10/13 18:42:47 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 void    *ft_memset(void *b, int c, size_t len)
 {
-    unsigned char s;
+    unsigned char *s;
     
-    s = (unsigned char)c;
-    ddd
+    s = b;
+    while (len != '0')
+    {
+        *s++ = (unsigned char)c;
+    }
+    return (b);
 }

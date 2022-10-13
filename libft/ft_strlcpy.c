@@ -6,17 +6,17 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:47 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:38:23 by azengin          ###   ########.fr       */
+/*   Updated: 2022/10/13 19:16:54 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-size_t  strlcpy(char *dst, const char *src, size_t dstsize)
+size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    unsigned int    i;
-    size_t          srcsize;
+    size_t  i;
+    size_t  srcsize;
 
     srcsize = ft_strlen(src);
     i = 0;

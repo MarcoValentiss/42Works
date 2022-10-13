@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-char    *strstr(const char *haystack, const char *needle, size_t len)
+char    *ft_strstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned int	i;
-	unsigned int	s;
+	size_t	i;
+	size_t	s;
 
 	i = 0;
 	s = 0;

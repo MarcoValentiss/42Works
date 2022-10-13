@@ -6,22 +6,20 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:41 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:38:19 by azengin          ###   ########.fr       */
+/*   Updated: 2022/10/13 19:32:22 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char    *strchr(const char *s, int c)
+char    *ft_strchr(const char *s, int c)
 {
     size_t  i;
-    char    a;
-
-    a = (char)c;
+  
     i = 0;
     while (s[i])
     {
-        if (s[i] == a)
+        if (s[i] == (char)c)
             return (s[i]);
         i++;
     }

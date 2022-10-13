@@ -6,17 +6,14 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:56 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:38:09 by azengin          ###   ########.fr       */
+/*   Updated: 2022/10/13 18:42:50 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_tolower(int c)
 {
-    unsigned char   s;
-
-    s = (unsigned char)c;
-    if(s >= 'A' && s <= 'Z')
-        return(s + 32);
+    if((unsigned char)c >= 'A' && (unsigned char)c <= 'Z')
+        return((unsigned char)c + 32);
     else
-        return(s);
+        return((unsigned char)c);
 }
