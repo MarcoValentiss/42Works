@@ -1,4 +1,4 @@
-int	ft_whitespaces(char *str, int *pointer)
+int	ft_whitespaces(const char *str, int *pointer)
 {
 	int	count;
 	int	i;
