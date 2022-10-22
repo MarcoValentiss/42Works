@@ -23,9 +23,9 @@ int	ft_whitespaces(const char *str, int *pointer)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int		i;
+	int		sign;
+	long	result;
 
 	result = 0;
 	sign = ft_whitespaces(str, &i);
@@ -36,5 +36,13 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	result *= sign;
-	return (result);
+	if (result > 2147483647)
+	{
+		return (-1);
+	}
+	else if (result < -2147483648)
+	{
+		return (0);
+	}
+	return ((int)result);
 }
