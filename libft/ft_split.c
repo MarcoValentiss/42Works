@@ -1,9 +1,6 @@
-#include <stdlib.h>
-#include "libft.h"
-
-char    *ft_strtrim(char const *s1, char const *set)
+char    **ft_split(char const *s, char c)
 {
-    int i;
+    int i; 
     int j;
     char *p;
 

@@ -9,6 +9,9 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
 
     cdst = (char *)dst;
     csrc = (char *)src;
+
+    if (!dst && !src)
+        return (0);
     i = 0;
     while (i < n)
     {

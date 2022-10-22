@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:41 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/15 16:00:41 by azengin          ###   ########.fr       */
+/*   Updated: 2022/10/22 18:46:40 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char    *ft_strchr(const char *s, int c)
 {
-    size_t  i;
+    int  i;
   
     i = 0;
     while (s[i])
@@ -23,5 +23,7 @@ char    *ft_strchr(const char *s, int c)
             return((char *)&s[i]);
         i++;
     }
+    if ((char)c == '\0' && s[i] == '\0')
+        return((char *)&s[i]);
     return (0);
 }
