@@ -3,23 +3,21 @@
 
 char    *ft_strtrim(char const *s1, char const *set)
 {
-    int i;
-    int j;
-    char *p;
+    size_t    start;
+    size_t    end;
+    size_t    i;
 
-    p = (char *)malloc(sizeof(char) * ft_strlen(s1));
-    i = 0;
-    j = 0;
-    if (!p)
+    if (!s1)
         return (0);
-    while (s1[i])
-    {
-        if ((ft_strchr(set, (int)s1[i])) == 0)
-        {
-            p[j] = s1[i];
-            j++;
-        }
-        i++;
-    }
-    return (p);
+    i = 0;
+    start = 0;
+    end = ft_strlen(s1) - 1;
+    while (s1[i] && ft_strchr(set, s1[i]))
+        start = (i++) + 1;
+    if (start >= ft_strlen(s1))
+        return ((char *)ft_calloc(sizeof(char), 1));
+    i = ft_strlen(s1) - 1;
+    while (i && s1[i] && ft_strchr(set, s1[i]))
+        end = (i--) - 1;
+    return (ft_substr(s1, start, (end - start + 1)));
 }

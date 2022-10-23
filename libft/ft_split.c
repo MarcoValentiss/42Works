@@ -1,54 +1,81 @@
 
 #include <stdio.h>
+#include "libft.h"
 
-size_t word_count(char const *s, char *size, char c)
+char            **ft_freeall(char **s)
 {
-    size_t i;
-    size_t counter;
+    unsigned int    i;
 
-    counter = 0;
     i = 0;
-    size[0] = "0";
-
-    while (s[i])
+    while (s[i] != NULL)
     {
-        if (s[i] == c)
-        {
-            counter++;
-            size[counter] = (char)i;
-        }
+        free(s[i]);
         i++;
     }
-    return (counter);
+    free(s);
+    return (NULL);
 }
 
-char    **ft_split(char const *s, char c)
+size_t        ft_wordcnt(const char *s, char d)
 {
-    size_t i;
-    size_t c;
-    char *size;
+    size_t            cnt;
+    size_t            i;
 
-    c = word_count(s, size, c);
-
-    while (c > 0)
+    cnt = 0;
+    i = 0;
+    while (s[i])
     {
-        
+        if (s[i] != d)
+        {
+            cnt++;
+            while (s[i] && s[i] != d)
+                i++;
+        }
+        else
+            i++;
     }
+    return (cnt);
+}
 
+char            *ft_worddup(const char *s, char d)
+{
+    size_t            len;
+    char            *ptr;
 
-    p = (char *)malloc(sizeof(char) * ft_strlen(s1));
+    len = 0;
+    while (s[len] && s[len] != d)
+        len++;
+    if (!(ptr = (char *)ft_calloc(len + 1, sizeof(char))))
+        return (NULL);
+    ft_strlcpy(ptr, s, len + 1);
+    return (ptr);
+}
+
+char                **ft_split(const char *s, char d)
+{
+    char            **ptr;
+    size_t            len;
+    size_t            i;
+    size_t            j;
+
+    if (!s)
+        return (NULL);
+    len = ft_wordcnt(s, d);
+    if (!(ptr = (char **)ft_calloc(len + 1, sizeof(char *))))
+        return (NULL);
     i = 0;
     j = 0;
-    if (!p)
-        return (0);
-    while (s1[i])
+    while (i < len && s[j])
     {
-        if ((ft_strchr(set, (int)s1[i])) == 0)
+        if (s[j] != d)
         {
-            p[j] = s1[i];
-            j++;
+            if (!(ptr[i++] = ft_worddup(&(s[j]), d)))
+                return (ft_freeall(ptr));
+            while (s[j] && s[j] != d)
+                j++;
         }
-        i++;
+        else
+            j++;
     }
-    return (p);
+    return (ptr);
 }
