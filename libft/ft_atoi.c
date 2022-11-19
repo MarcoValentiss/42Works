@@ -1,7 +1,7 @@
 int	ft_whitespaces(const char *str, int *pointer)
 {
 	int	count;
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	count = 1;
@@ -23,8 +23,8 @@ int	ft_whitespaces(const char *str, int *pointer)
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	int		sign;
+	int	i;
+	long	sign;
 	long	result;
 
 	result = 0;
@@ -35,14 +35,11 @@ int	ft_atoi(const char *str)
 		result += str[i] - 48;
 		i++;
 	}
-	result *= sign;
-	if (result > 2147483647)
-	{
+	result = result * sign;
+	if (result < -2147483648)
 		return (-1);
-	}
-	else if (result < -2147483648)
-	{
+	else if (result > 2147483647)
 		return (0);
-	}
-	return ((int)result);
+	else
+		return ((int)result);
 }

@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/15 18:14:55 by azengin          ###   ########.fr       */
+/*   Updated: 2022/11/19 16:16:23 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,6 @@ size_t            ft_strlcpy(char *dst, const char *src, size_t size);
 
 size_t            ft_strlen(const char *s);
 
-char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
 int                ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char            *ft_strnstr(const char *haystack, const char *needle,
@@ -112,6 +110,10 @@ void            ft_lstdelone(t_list *lst, void (*del)(void*));
 void            ft_lstclear(t_list **lst, void (*del)(void*));
 
 void            ft_lstiter(t_list *lst, void (*f)(void*));
+
+void            ft_putstr(char *s);
+
+void            ft_putchar(char c);
 
 t_list            *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
 
