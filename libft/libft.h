@@ -89,6 +89,8 @@ char            *ft_strrchr(const char *s, int c);
 
 char            *ft_strtrim(char const *s1, char const *set);
 
+void            ft_striteri(char *s, void (*f)(unsigned int,char*));
+
 char            *ft_substr(char const *s, unsigned int start, size_t len);
 
 int                ft_tolower(int c);
@@ -114,6 +116,8 @@ void            ft_lstiter(t_list *lst, void (*f)(void*));
 void            ft_putstr(char *s);
 
 void            ft_putchar(char c);
+
+char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 t_list            *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
 
