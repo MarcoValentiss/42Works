@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/11/19 16:16:23 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/10 16:57:20 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,9 @@ void            ft_putstr(char *s);
 void            ft_putchar(char c);
 
 t_list            *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
+
+void ft_striteri(char *s, void (*f)(unsigned int,char*));
+
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
