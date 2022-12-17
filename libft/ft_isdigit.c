@@ -6,14 +6,14 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:17:55 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/22 17:45:21 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/17 17:39:13 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if(c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }

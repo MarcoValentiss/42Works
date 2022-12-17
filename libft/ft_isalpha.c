@@ -6,14 +6,14 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:17:52 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/22 15:25:50 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/17 16:34:56 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if((c >= 'A' && c<= 'Z') || (c >= 'a' && c <= 'z'))
-        return (1);
-    else
-        return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }

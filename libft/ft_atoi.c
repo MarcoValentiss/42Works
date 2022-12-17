@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/17 14:22:42 by azengin           #+#    #+#             */
+/*   Updated: 2022/12/17 17:38:26 by azengin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_whitespaces(const char *str, int *pointer)
 {
-	int	count;
-	unsigned int	i;
+	int					i;
+	unsigned int		count;
 
 	i = 0;
 	count = 1;
@@ -16,14 +28,14 @@ int	ft_whitespaces(const char *str, int *pointer)
 			count *= -1;
 		}
 	i++;
-	}	
+	}
 	*pointer = i;
 	return (count);
 }
 
 int	ft_atoi(const char *str)
 {
-	int	i;
+	int		i;
 	long	sign;
 	long	result;
 

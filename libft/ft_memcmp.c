@@ -1,13 +1,25 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/17 14:23:46 by azengin           #+#    #+#             */
+/*   Updated: 2022/12/17 17:41:47 by azengin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t	i;
-    unsigned char    *a1;
-    unsigned char    *a2;
+	size_t			i;
+	unsigned char	*a1;
+	unsigned char	*a2;
 
-    a1 = (unsigned char *)s1;
-    a2 = (unsigned char *)s2;
+	a1 = (unsigned char *)s1;
+	a2 = (unsigned char *)s2;
 	i = 0;
 	while (i < n)
 	{

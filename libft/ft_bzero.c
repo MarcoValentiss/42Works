@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/17 14:22:47 by azengin           #+#    #+#             */
+/*   Updated: 2022/12/17 17:37:33 by azengin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t  i;
-    unsigned char *z;
+	size_t			i;
+	unsigned char	*z;
 
-    z = (unsigned char *)s;
-    i = 0;
-    
-    while(i < n)
-    {
-        z[i] = '\0';
-        i++;
-    }
+	z = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		z[i] = '\0';
+		i++;
+	}
 }

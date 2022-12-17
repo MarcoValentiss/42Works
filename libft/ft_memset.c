@@ -6,21 +6,21 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:37 by azengin           #+#    #+#             */
-/*   Updated: 2022/11/13 20:11:46 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/17 17:01:46 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    char *s;
-    
-    s = (char *)b;
-    while (len != 0)
-    {
-        *s++ = (char)c;
-        len--;
-    }
-    return (b);
+	char	*s;
+
+	s = (char *)b;
+	while (len != 0)
+	{
+		*s++ = (char)c;
+		len--;
+	}
+	return (b);
 }

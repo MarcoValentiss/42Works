@@ -6,20 +6,20 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:50 by azengin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:38:26 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/17 17:45:25 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t  len;
-    
-    len = 0;
-    while (s[len])
-    {
-        len++;
-    }
-    return (len);
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+	{
+		len++;
+	}
+	return (len);
 }
