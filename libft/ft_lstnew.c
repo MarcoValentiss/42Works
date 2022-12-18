@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:23:36 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 17:41:18 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/18 14:01:08 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,14 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	// Allocate memory for the new linked list. //
-	t_list	*list = malloc(sizeof(t_list));
-	
-    // Check if the memory allocation was successful.
-    if (list == NULL)
-    {
-        exit(1);
-    }
+	t_list	*list;
 
-    // Set the content of the new linked list to the given content.
-    list->content = content;
-
-    // Set the next pointer of the new linked list to NULL.
-    list->next = NULL;
-
-    // Return the new linked list.
-    return list;
+	list = malloc(sizeof(t_list));
+	if (list == NULL)
+	{
+		exit(1);
+	}
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

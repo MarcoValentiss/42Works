@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 14:24:40 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/18 18:43:11 by azengin          ###   ########.fr       */
+/*   Created: 2022/12/18 13:56:35 by azengin           #+#    #+#             */
+/*   Updated: 2022/12/18 18:08:59 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 {
-	size_t	i;
-	size_t	s;
+	t_list	*newlist;
+	t_list	*temp;
 
-	i = 0;
-	s = 0;
-	if (needle[i] == '\0')
+	if (!f || !del)
+		return (NULL);
+	newlist = NULL;
+	while (lst)
 	{
-		return ((char *)haystack);
-	}
-	while (haystack[s] != '\0' && s < len)
-	{
-		i = 0;
-		while (haystack[i + s] == needle[i]
-			&& haystack[i + s] != '\0' && i + s < len)
+		temp = ft_lstnew((*f)(lst->content));
+		if (!temp)
 		{
-			if (needle[i + 1] == '\0')
+			while (newlist)
 			{
-				return ((char *)&haystack[s]);
+				temp = newlist->next;
+				(*del)(newlist->content);
+				free(newlist);
+				newlist = temp;
 			}
-			i++;
+			lst = NULL;
+			return (NULL);
 		}
-		s++;
+		ft_lstadd_back(&newlist, temp);
+		lst = lst->next;
 	}
-	return (0);
+	return (newlist);
 }

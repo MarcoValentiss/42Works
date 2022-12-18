@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:23:31 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 16:42:20 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/18 14:45:59 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst || !del)
+	if (!lst)
 	{
 		return ;
 	}
-	else
-	{
-		del(lst->content);
-		free(lst);
-		lst = NULL;
-	}
+	del(lst->content);
+	free(lst);
 }

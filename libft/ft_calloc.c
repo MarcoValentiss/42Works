@@ -6,12 +6,10 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:22:49 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 16:23:48 by azengin          ###   ########.fr       */
+/*   Updated: 2022/12/17 22:38:02 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
