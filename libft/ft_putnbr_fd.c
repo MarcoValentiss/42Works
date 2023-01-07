@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:24:06 by azengin           #+#    #+#             */
-/*   Updated: 2023/01/07 21:04:57 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 21:57:04 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,4 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		ft_putchar_fd(n + '0', fd);
-}
-
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-
-
-int	main()
-{
-	char *str;
-	int	n;
-	int fd;
-
-	n = 3333;
-	str = (char *)malloc(sizeof(char) * 4);
-	fd = open("test.txt", O_RDWR | O_CREAT, 777);
-	ft_putnbr_fd(n, fd);
-	fd = write(1, "4444", 4);
-	close(fd);
-	fd = open("test.txt", O_RDONLY, 777);
-	read(fd, str, 2);
-	printf("%s", str);
-
 }
