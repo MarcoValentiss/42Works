@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:22:42 by azengin           #+#    #+#             */
-/*   Updated: 2023/01/07 18:09:32 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/08 01:44:35 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,12 @@ int	ft_atoi(const char *str)
 	while (str[i] && str[i] >= 48 && str[i] <= 57)
 	{
 		result *= 10;
-		result += str[i] - 48;
+		result += (str[i] - 48) * sign;
+		if (result < -2147483648)
+			return (0);
+		else if (result > 2147483647)
+			return (-1);
 		i++;
 	}
-	result = result * sign;
-	if (result < -2147483648)
-		return (0);
-	else if (result > 2147483647)
-		return (-1);
-	else
-		return ((int)result);
+	return ((int)result);
 }
