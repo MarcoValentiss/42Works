@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:24:16 by azengin           #+#    #+#             */
-/*   Updated: 2023/01/07 17:41:28 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 20:46:51 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ft_wordcnt(const char *s, char d)
 	return (cnt);
 }
 
-static char	*ft_worddup(const char *s, char d)
+static char	*ft_strndup(const char *s, char d)
 {
 	size_t	len;
 	char	*ptr;
@@ -65,7 +65,7 @@ char	**ft_split(const char *s, char d)
 	{
 		if (s[j] != d)
 		{	
-			ptr[i++] = ft_worddup(&(s[j]), d);
+			ptr[i++] = ft_strndup(&(s[j]), d);
 			if (!ptr)
 				return (NULL);
 			while (s[j] && s[j] != d)

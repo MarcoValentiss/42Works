@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:23:50 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 16:58:07 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 20:27:50 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (i < len)
+		while (len > 0)
 		{
-			dest[i] = source[i];
-			i++;
+			*dest++ = *source++;
+			len--;
 		}
 	}
 	return (dst);
