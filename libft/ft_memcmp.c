@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:23:46 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 17:41:47 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 14:19:22 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (a1[i] > a2[i])
-			return (a1[i] - a2[i]);
-		else if (a1[i] < a2[i])
+		if (a1[i] != a2[i])
 			return (a1[i] - a2[i]);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:25:03 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/18 19:31:45 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 14:48:06 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	if (!s1 || !s2)
+	if (!s1)
 		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	final = (char *)malloc(sizeof(char) * (size + 1));
+	final = (char *)malloc(sizeof(char) * (size));
 	if (!final)
 		return (0);
 	i = 0;

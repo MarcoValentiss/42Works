@@ -6,22 +6,20 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:22:47 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 17:37:33 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 13:25:56 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
 	unsigned char	*z;
 
 	z = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	while (n != 0)
 	{
-		z[i] = '\0';
-		i++;
+		*z++ = '\0';
+		n--;
 	}
 }

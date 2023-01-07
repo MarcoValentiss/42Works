@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:24:47 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 17:28:56 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 14:40:40 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		return (0);
 	if (ft_strlen(s) < start)
 		len = 0;
-	if (ft_strlen(s + start) < len)
+	else if (ft_strlen(s + start) < len)
 		len = ft_strlen(s + start);
 	sub = malloc(sizeof(char) * (len + 1));
 	if (!sub)

@@ -6,11 +6,14 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:23:00 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 16:35:26 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 12:57:05 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

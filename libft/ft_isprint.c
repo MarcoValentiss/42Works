@@ -6,11 +6,14 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:37:34 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 17:39:25 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 12:59:15 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (c >= 32 && c <= 126);
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
