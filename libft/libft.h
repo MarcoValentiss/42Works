@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:35:39 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/18 15:19:11 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 17:18:45 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 void	ft_lstiter(t_list *lst, void (*f)(void*));
-
-void	ft_putstr(char *s);
-
-void	ft_putchar(char c);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 

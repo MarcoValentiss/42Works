@@ -6,11 +6,11 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:22:42 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 17:38:26 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 17:13:31 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_whitespaces(const char *str, int *pointer)
+static int	ft_whitespaces(const char *str, int *pointer)
 {
 	int					i;
 	unsigned int		count;

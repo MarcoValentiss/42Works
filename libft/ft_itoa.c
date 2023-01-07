@@ -6,13 +6,13 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 19:20:32 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/17 20:31:21 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 17:46:50 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_digits(int n)
+static int	ft_count_digits(int n)
 {
 	int	count;
 

@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:24:24 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/18 15:39:36 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 16:33:15 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (s[i] != '\0')
 	{

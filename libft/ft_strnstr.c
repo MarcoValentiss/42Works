@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:24:40 by azengin           #+#    #+#             */
-/*   Updated: 2022/12/18 18:43:11 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/07 18:04:15 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	s = 0;
 	if (needle[i] == '\0')
-	{
 		return ((char *)haystack);
-	}
+	else if (len == 0)
+		return (0);
 	while (haystack[s] != '\0' && s < len)
 	{
 		i = 0;
@@ -30,9 +30,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			&& haystack[i + s] != '\0' && i + s < len)
 		{
 			if (needle[i + 1] == '\0')
-			{
 				return ((char *)&haystack[s]);
-			}
 			i++;
 		}
 		s++;
