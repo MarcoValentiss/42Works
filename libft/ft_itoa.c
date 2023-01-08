@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 19:20:32 by azengin           #+#    #+#             */
-/*   Updated: 2023/01/07 20:52:43 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/08 14:25:09 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,12 @@ static int	ft_count_digits(int n)
 	{
 		return (1);
 	}
-	if (n < 0)
-	{
-		n = -n;
-	}
-	while (n > 0)
+	while (n / 10 >= 1)
 	{
 		n /= 10;
 		count++;
 	}
-	return (count);
+	return (count + 1);
 }
 
 char	*ft_itoa(int n)

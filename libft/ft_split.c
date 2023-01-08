@@ -6,7 +6,7 @@
 /*   By: azengin <azengin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:24:16 by azengin           #+#    #+#             */
-/*   Updated: 2023/01/08 01:24:35 by azengin          ###   ########.fr       */
+/*   Updated: 2023/01/08 14:48:23 by azengin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*ft_strndup(const char *s, char d)
 	len = 0;
 	while (s[len] && s[len] != d)
 		len++;
-	ptr = (char *)ft_calloc(len + 1, sizeof(char));
+	ptr = ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, s, len + 1);
@@ -56,7 +56,7 @@ char	**ft_split(const char *s, char d)
 
 	if (!s)
 		return (NULL);
-	ptr = (char **)ft_calloc(ft_wordcnt(s, d) + 1, sizeof(char *));
+	ptr = ft_calloc(ft_wordcnt(s, d) + 1, sizeof(char *));
 	if (!ptr)
 		return (NULL);
 	i = 0;
